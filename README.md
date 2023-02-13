@@ -2,14 +2,13 @@
 Java implementation of the [Whale Optimization Algorithm](https://www.sciencedirect.com/science/article/pii/S0965997816300163)
 
 ## Description
-Additional information about WOA can be found at the [algorithm's webpage](http://www.alimirjalili.com/WOA.html).
+Additional information about WOA can be found at the [algorithm's webpage](https://seyedalimirjalili.com/woa).
 
 ## Usage
-There are three test classes in "/src/test/java", containing several demos about how to use this algorithm to optimize specify functions.
+The implementation of WOA can be found in "/src/main/java/WOA.java", which is a single objective optimization algorithm.
 
-Test classes:
+The test classes in "/src/test/java", which contain several demos on how to use this algorithm to optimize specify functions:
 - SOOTest : Test functions for single-objective optimization
-- MOOTest : Test functions for multi-objective optimization
 - COTest : Test functions for constrained optimization
 
 All the test functions can be found in [Test functions for optimization](https://en.wikipedia.org/wiki/Test_functions_for_optimization)

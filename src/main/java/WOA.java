@@ -7,10 +7,7 @@ import java.util.Random;
 /**
  * @author : LA4AM12
  * @create : 2023-02-10 16:16:20
- * @description : class implements the whale optimization algorithm as found at
- *                http://www.alimirjalili.com/WOA.html
- *                and
- *                https://doi.org/10.1016/j.advengsoft.2016.01.008
+ * @description : class implements the whale optimization algorithm
  */
 public class WOA {
 	private OptFunction optFunction;
@@ -92,7 +89,7 @@ public class WOA {
 			for (int j = 0; j < dim; j++) {
 				if (p < 0.5) {
 					if (Math.abs(A) < 1) {
- 						double D_Leader = Math.abs(C * optimalPos[j] - positions[i][j]);  // Eq. (2.1)
+						double D_Leader = Math.abs(C * optimalPos[j] - positions[i][j]);  // Eq. (2.1)
 						positions[i][j] = optimalPos[j] - A * D_Leader;      // Eq. (2.2)
 					} else {
 						int randWhaleIdx = rand.nextInt(population);
@@ -103,7 +100,7 @@ public class WOA {
 				} else {
 					double distance2Leader = Math.abs(optimalPos[j] - positions[i][j]);
 					// Eq. (2.5)
-					positions[i][j] = distance2Leader * Math.exp(b*l)*Math.cos(2.0 * Math.PI * l) + optimalPos[j];
+					positions[i][j] = distance2Leader * Math.exp(b * l) * Math.cos(2.0 * Math.PI * l) + optimalPos[j];
 				}
 			}
 		}

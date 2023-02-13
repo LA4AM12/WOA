@@ -5,12 +5,13 @@ import org.junit.Test;
  * @create : 2023-02-12 11:22:18
  * @description : Test functions for constrained optimization
  */
+
 public class COTest {
 	@Test
 	public void rosenbrockConstrainedToDiskTest() {
 		OptFunction rosenbrock = params -> {
 			double x = params[0], y = params[1];
-			return Math.pow(1 - x, 2) + Math.pow(y - x*x, 2)*100;
+			return Math.pow(1 - x, 2) + Math.pow(y - x * x, 2) * 100;
 		};
 
 		// constrain : x^2 + y^2 <= 2
@@ -18,7 +19,7 @@ public class COTest {
 		OptFunction penaltyFunc = params -> {
 			double x = params[0], y = params[1];
 			double penaltyForce = 2.0;
-			return penaltyForce * Math.max(x*x+y*y-2, 0);
+			return penaltyForce * Math.max(x * x + y * y - 2, 0);
 		};
 
 		OptFunction constrainedFunc = params -> {

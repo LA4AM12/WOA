@@ -4,7 +4,6 @@ import org.junit.Test;
  * @author : LA4AM12
  * @create : 2023-02-10 11:34:28
  * @description : Test functions for single-objective optimization
- * which from https://en.wikipedia.org/wiki/Test_functions_for_optimization
  */
 
 public class SOOTest {
@@ -18,7 +17,7 @@ public class SOOTest {
 		};
 		WOA woa = new WOA(beale, 30, -4.5, 4.5, 2, 500, true);
 		woa.execute();
-		System.out.println("optimize beale function result:");
+		System.out.println("Results of beale function optimisation:");
 		woa.printOptimal();
 	}
 
@@ -31,7 +30,7 @@ public class SOOTest {
 
 		WOA woa = new WOA(matyas, 30, -10, 10, 2, 500, true);
 		woa.execute();
-		System.out.println("optimize matyas function result:");
+		System.out.println("Results of matyas function optimisation:");
 		woa.printOptimal();
 	}
 
@@ -44,7 +43,7 @@ public class SOOTest {
 		};
 		WOA woa = new WOA(himmelblau, 30, -5, 5, 2, 500, true);
 		woa.execute();
-		System.out.println("optimize himmelblau's function result:");
+		System.out.println("Results of himmelblau's function optimisation:");
 		woa.printOptimal();
 	}
 
@@ -59,7 +58,7 @@ public class SOOTest {
 
 		WOA woa = new WOA(levi, 30, -10, 10, 2, 500, true);
 		woa.execute();
-		System.out.println("optimize levi function result:");
+		System.out.println("Results of levi function optimisation:");
 		woa.printOptimal();
 	}
 }
